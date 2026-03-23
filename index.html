@@ -24,3 +24,291 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Alpina Auctions(Pty)Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #c0392b;
+            --dark: #2c3e50;
+            --light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* Inventory Section */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .car-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-info {
+            padding: 20px;
+        }
+
+        .car-price {
+            color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .car-specs {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-box {
+            margin: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a252f;
+            color: #bdc3c7;
+            font-size: 0.8rem;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><i class="fas fa-car"></i> Auto Alpina Auctions(Pty)Ltd</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Drive Your Dream car Today</h1>
+        <p>Premium pre-owned vehicles with certified warranties.</p>
+        <a href="#inventory" class="btn">View Inventory</a>
+    </header>
+
+    <!-- Main Inventory -->
+    <div class="container" id="inventory">
+        <div class="section-title">
+            <h2>Featured Inventory</h2>
+            <p>Quality hand-picked vehicles for every lifestyle</p>
+        </div>
+
+        <div class="car-grid">
+            <!-- Car 1 -->
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=500&q=60" alt="BMW" class="car-image">
+                <div class="car-info">
+                    <h3>2022 BMW M4 Competition</h3>
+                    <p class="car-price">R78,500</p>
+                    <div class="car-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 12k Miles</span>
+                        <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        <span><i class="fas fa-cog"></i> Auto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=500&q=60" alt="Audi" class="car-image">
+                <div class="car-info">
+                    <h3>2021 Audi RS7 Sportback</h3>
+                    <p class="car-price">R92,000</p>
+                    <div class="car-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 8k Miles</span>
+                        <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        <span><i class="fas fa-cog"></i> Auto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=60" alt="Porsche" class="car-image">
+                <div class="car-info">
+                    <h3>2023 Porsche 911 Carrera</h3>
+                    <p class="car-price">R1 115,000</p>
+                    <div class="car-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 2k Miles</span>
+                        <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                        <span><i class="fas fa-cog"></i> Auto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-box">
+                <i class="fas fa-phone-alt fa-2x" style="color:var(--primary)"></i>
+                <h3>Call Us</h3>
+                <p>011 219 7114</p>
+                <p>087 510 4114</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-map-marker-alt fa-2x" style="color:var(--primary)"></i>
+                <h3>Visit Us</h3>
+                <p>22 2nd Avenue Springs Johannesburg</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-clock fa-2x" style="color:var(--primary)"></i>
+                <h3>Opening Hours</h3>
+                <p>Mon-Sat: 9am - 7pm</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Auto Alpina Auctions(Pty)Ltd. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
